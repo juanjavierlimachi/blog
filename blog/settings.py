@@ -76,20 +76,25 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-
-
-MEDIA_ROOT=os.path.join(RUTA_PROYECTO,"media")
-MEDIA_URL="/media/"
-STATIC_URL = '/static/'
-TEMPLATE_DIRS=(os.path.join(RUTA_PROYECTO,"templates"),)
-STATICFILES_DIRS=(os.path.join(RUTA_PROYECTO,"static"),)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 import dj_database_url#aumente
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.7/howto/static-files/
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [#aumente
+        os.path.join(BASE_DIR, "static"),
+    ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
+TEMPLATE_DIRS=(os.path.join(RUTA_PROYECTO,"templates"),)
+STATICFILES_DIRS=(os.path.join(RUTA_PROYECTO,"static"),)
+MEDIA_ROOT=os.path.join(RUTA_PROYECTO,"media")
+MEDIA_URL='/media/'
 
 db_from_env = dj_database_url.config(conn_max_age=500)#aumente
 DATABASES['default'].update(db_from_env)
