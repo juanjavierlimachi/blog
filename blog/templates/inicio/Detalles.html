@@ -1,0 +1,72 @@
+<style type="text/css">
+#images{
+	width: 250px;height: 250px;margin: auto; border-radius: 5px;
+}
+</style>
+<script type="text/javascript">
+$(function(){
+	$(".modal-title").html("");
+});
+function Ofertas(ids){
+       var dato=$('#FormO').serialize();
+       console.log(dato);
+        $.ajax({
+            type:'POST',
+            url:'/ofertas/'+ids+'/',
+            data: dato,
+            success:function(resp){
+                $(".modal-title").html(resp);
+                VerProducto();
+            }
+        });
+}
+function Baja(ids){
+       var dato=$('#FormB').serialize();
+       console.log(dato);
+        $.ajax({
+            type:'POST',
+            url:'/dar_baja/'+ids+'/',
+            data: dato,
+            success:function(resp){
+                $(".modal-title").html(resp);
+                VerProducto();
+            }
+        });
+}
+</script>
+<div class="table-responsive">
+	<table class="table table-hover table-striped">
+		<tr>
+			<td align="center" colspan="2">Poner el Producto: {{producto.Nombre_producto}}</td>
+		</tr>
+		<tr>
+			<td rowspan="5"><img src="{{MEDIA_URL}}{{producto.Imagen}}" id="images" class="img-rounded" alt="Cinque Terre"></td>
+		</tr>
+		<tr>
+			<td>Descripción: {{producto.Descripcion}}</td>
+		</tr>
+		<tr>
+			<td>
+				<form method="POST" id="FormO">{% csrf_token %}
+					<label>Poner en oferta este Producto?</label>
+					<input type="checkbox" name="oferta" id="oferta" required>
+				<button type="button" class="btn btn-warning" onclick="Ofertas({{producto.id}});">Sí</button>
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<form method="POST" id="FormB">{% csrf_token %}
+					<label>Dar de Baja este Producto?</label>
+					<input type="checkbox" name="baja" id="baja" required>
+				<button type="button" class="btn btn-danger" onclick="Baja({{producto.id}});">Sí</button>
+				</form>
+			</td>	
+		</tr>
+		<tr>
+			<td>
+				<button type="button" class="btn btn-info" data-dismiss="modal">Atrás</button>
+			</td>	
+		</tr>			
+	</table>
+</div>

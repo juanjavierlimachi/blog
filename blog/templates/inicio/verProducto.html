@@ -1,0 +1,84 @@
+<div class="table-responsive">
+<table class="table table-hover table-striped">
+	<tr><td colspan="7" align="center">LISTA DE PRODUCTOS</td></tr>
+		<tr class="success">
+			<td>Num.</td>
+			<td>Nombre del Producto</td>
+			<td>Descripción</td>
+			<td>Precio Venta</td>
+			<td>Fecha y hora de registro</td>
+			<td>Estado</td>
+		</tr>
+{% for b in productos %}
+<tr>
+	<td><a href="#" onclick="Detalles({{b.id}});" data-toggle="modal" data-target="#exampleModal"><span class="glyphicon glyphicon-chevron-right"></span>  {{b.id}}</a></td>
+	<td>{{b.Nombre_producto}}</td>
+	<td>{{b.Descripcion}}</td>
+	{% if b.En_oferta %}
+		<td style="color:green">{{b.Precio_Venta}} - En Oferta</td>
+	{% else %}
+		<td>{{b.Precio_Venta}}</td>
+	{% endif %}
+	<td>{{b.fecha_registro}}</td>
+	<td>
+ 	{% if b.estado %}
+			<span><img src="/static/img/icon_success.gif"></span>
+		{% else %}
+			<span><img src="/static/img/icon_error.gif"></span>
+	{% endif %}
+	<a href="#" onclick="EdirtarPro({{b.id}});" data-toggle="modal" data-target="#exampleModal">Editar<span class="glyphicon glyphicon-pencil"></span></a>
+	</td>
+</tr>
+	{% endfor %}
+	<tr>
+		<td colspan="2">Total Registros:{{c_total}}</td>
+		<td colspan="2">Activos:{{c_act}}</td>
+		<td colspan="2">Inactivos:{{c_des}}</td>
+	</tr>
+	</table>
+	<ul class="pager">
+		{% if contenido.has_previous %}
+			  <li><a href="/verProducto/?page={{ contenido.previous_page_number }}">Anterior</a></li>
+		{% endif %}
+		 <span class="current">
+            Página {{ contenido.number }} de {{ contenido.paginator.num_pages }}.
+        </span>
+        {% if contenido.has_next %}
+			  <li><a href="/verProducto/?page={{ contenido.next_page_number }}">Siguiente</a></li>
+		{% endif %}
+	</ul>
+</div>
+<script type="text/javascript">
+$(".pager li a").on("click",function(e){
+		e.preventDefault();
+			$.ajax({
+					type:'GET',
+					url:$(this).attr("href"),
+					beforeSend:Espera,
+					success:function(resp){
+						$("#FormAjax").html(resp);
+					}
+			});
+			 function Espera(){
+		      $("#FormAjax").html('<img src="/static/img/log.gif" id="icono"></img><br>Procesando...');
+		    }
+	});
+function Detalles(ids){
+	$.ajax({
+		type:'GET',
+		url:'/Detalles/'+ids+'/',
+		success:function(resp){
+			$(".modal-body").html(resp);
+		}
+	});
+}
+function EdirtarPro(ids){
+	$.ajax({
+		type:'GET',
+		url:'/EdirtarPro/'+ids+'/',
+		success:function(resp){
+			$(".modal-body").html(resp);
+		}
+	});
+}
+</script>

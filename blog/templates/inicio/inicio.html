@@ -1,0 +1,449 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>::Parabrisas CHELO::</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.minWeb.css' %}">
+    <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{% static 'js/jquery-1.12.4.minWeb.js' %}"></script>
+<script src="{% static 'js/bootstrap.minWeb.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.corner.js' %}"></script> 
+ <script src="{% static 'js/wow.min.js' %}"></script>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    </script>
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}">
+    <style type="text/css">
+    .owl-item{
+      width: 300px;
+    }
+    .face .icon-facebook{border-radius: 90px;width: 30px;height: 30px;}
+    #owl-demo{width: 60%;}
+      .social{
+        position: fixed;
+        right: 0;
+        top: 35%;
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction:column;
+        align-items:flex-end;
+        z-index: 1000;
+      }
+      .icon{
+        color: white;
+        text-decoration: none;
+        display: flex;
+        transition:all .5s;
+        padding: 10px 15px;
+        text-decoration: none;
+        }
+        .iconF{
+        color: white;
+        text-decoration: none;
+        display: flex;
+        transition:all .5s;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 50px;
+        }
+        #facebook{
+          background: #3b5998;
+        }
+        .icon-twitter{
+          background: #00abf0;
+        }
+        .icon-google-plus{
+          background: #d95232;
+        }
+        .icon-pinterest{
+          background: #ae181f;
+        }
+        .icon-mail{
+          background: #666666;
+        }
+        #whasap{
+          background: #34AF23;
+        }
+        .icon-user{background: black;}
+        .icon:first-child{
+          border-radius: 0.5rem 0 0 0;
+        }
+        .icon:last-child{
+          border-radius: 0 0 0 0.5rem;
+        }
+        .icon:hover{
+          padding-right: 3rem;
+          border-radius: 1rem 0 0 1rem;
+          box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
+        }
+        .social #enlaces{list-style: none;}
+        #enlaces{list-style: none; }
+    </style>
+
+  </head>
+  <body>
+    <div class="bg">
+    <div class="container">
+      <div id="home" class="header wow bounceInDown" data-wow-delay="0.4s">
+          <div class="top-header">
+            <div class="logo">
+              <a href="#">Logo</a>
+            </div>
+             <nav class="top-nav">
+              <ul class="top-nav">
+                <li><a  href="#servicios" class="scroll">Servicios</a></li>
+                <li><a href="#ofertas" class="scroll">Ofertas</a></li>
+                <li><a href="#process" class="scroll">Productos</a></li>
+                <li><a  href="#contact" class="scroll">Dirección</a></li>
+                {% if user.is_authenticated %}
+                <!-- <li><a href="#team">Novedades</a></li> -->
+                <li><a href="/salir/">Salir</a></li>
+                {% else %}
+                <li id="enlaces"><a href="/loguin/" class="scroll" data-toggle="modal" data-target="#exampleModal">Ingresar</a></li>
+                {% endif %}
+              </ul>
+              <a href="#" id="pull"><img src="{% static 'img/nav-icon.png' %}" title="menu" /></a>
+            </nav>
+            <div class="clearfix"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner-info">
+        <div class="container">
+          <h1 class="wow fadeIn" data-wow-delay="0.5s"><span>Tienda Comercial</span><br /><label>Parabrisas  "CHELO"</label></h1>
+        <div class="top-banner-grids wow bounceInUp" data-wow-delay="0.4s">
+          
+          <div class="banner-grid text-center">
+            Promociones:
+              
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+      <div id="about" class="about">
+        <div class="head-section">
+          <div class="container">
+            <h3><span>Nuestra Empresa </span><label>Parabrisas CHELO</label></h3>
+          </div>
+        </div>
+          
+          <div class="about-grids">
+            <div class="col-md-4 about-grid about-grid1 wow fadeInLeft" data-wow-delay="0.4s">
+              <div class="about-grid-info">
+                <h4><a href="#">Misión</a></h4>
+                <p>Parabrisas "Chelo" es una empresa moderna, vanguardista a los cambios de la tecnología, dedicada a dar soluciones a problemas empresariales y particulares impulsando sus ideas, contamos con personal autorizado preparados para brindarle servicios de alta calidad en el colocado de su parabrisas de su movilidad</p>
+              </div>
+              <div class="about-grid-pic">
+              <img src="{% static 'img/about-pic1.jpg' %}" title="name" />
+              </div>
+            </div>
+            <div class="col-md-4 about-grid about-grid2 wow fadeInUp" data-wow-delay="0.4s">
+              <div class="about-grid-pic">
+              <img src="{% static 'img/about-pic2.jpg' %}" title="name" />
+              </div>
+              <div class="about-grid-info">
+                <h4><a href="#">Nosotros</a></h4>
+                <p>En Parabrisas "Chelo" Brindamos servicios de alta calidez en el colocado de parabrisas, reparación preventiva y correctiva de los vidrios de su vehículo, contamos con el stock completo de vidrios nacionales e importados a todo precio no lo dude más acérquese a nuestras oficinas de calle Av. Prado San clemente esq. Camargo su consulta no molesta.
+</p>
+              </div>
+            </div>
+            <div class="col-md-4 about-grid about-grid1 wow fadeInRight" data-wow-delay="0.4s">
+              <div class="about-grid-info">
+                <h4><a href="#">Visión</a></h4>
+                <p>Parabrisas "Chelo" pretende formar parte de tu automóvil brindándote la mejor calidad en vidrios, contar con muchas sucursales a nivel nacional e internacional. Y así tener muchas promociones y/o ofertas para la economía de usted.
+</p>
+              </div>
+              <div class="about-grid-pic">
+              <img src="{% static 'img/about-pic3.jpg' %}" title="name" />
+              </div>
+            </div>
+            <div class="clearfix"> </div>
+          </div>
+        
+        </div>
+      </div>
+
+ <!-- avia otras imagen -->
+ 
+      </div>
+      <div class="work-with-us text-center" id="servicios">
+        <div class="container">
+          <h4>Parabrisas "Chelo" realiza trabajos 100 % garatizados y profecionales como ser:</h4>
+          <p>Cambio de Parabrisas</p>
+          <p>Mantenimiento de vidrios</p>
+          <p>Seguridad en Vidrios</p>
+          <p>Acesoramiento de Materiales</p>
+          <p>*** Muy Pronto estaremos con muchos más servicios ***</p>
+        </div>
+      </div>
+     
+      <div id="team" class="team">
+       <!--  <div class="head-section">
+          <div class="container">
+             <h3><span>Integrantes de la Empresa: </span><label>CareSoft Innova S.R.L</label></h3>
+          </div>
+        </div> -->
+       
+      <div class="sreen-gallery-cursual">
+               <!-- requried-jsfiles-for owl -->
+        <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+        <script src="{% static 'js/owl.carousel.js' %}"></script>
+                      <script>
+                  $(document).ready(function() {
+                    $("#owl-demo").owlCarousel({
+                      items : 3,
+                      lazyLoad : true,
+                      autoPlay : true,
+                      navigation : true,
+                      navigationText :  false,
+                      pagination : false,
+                    });
+                  });
+                  </script>
+               <!-- //requried-jsfiles-for owl -->
+               <!-- start content_slider -->
+                   <div id="owl-demo" class="owl-carousel text-center">
+                          <div class="item wow zoomIn" data-wow-delay="0.3s">
+                            <img class="lazyOwl" data-src="{% static 'img/1.jpg' %}" alt="name" style="width: 240px;">
+                            <h5><span>Marcelino</span> Quinteros</h5>
+                            <label>Propietario</label>
+                          </div>
+                          <div class="item wow zoomIn" data-wow-delay="0.3s">
+                            <img class="lazyOwl" data-src="{% static 'img/2.jpg' %}" alt="name" style="width: 240px;">
+                            <h5><span>Kenny</span> Johns</h5>
+                            <label>CEO</label>
+                          </div>
+                          <div class="item wow zoomIn" data-wow-delay="0.3s">
+                            <img class="lazyOwl" data-src="{% static 'img/3.jpg' %}" alt="name" style="width: 240px;">
+                            <h5><span>Trisha </span> Steplton</h5>
+                            <label>Designer</label>
+                          </div>         
+                          <div class="item wow zoomIn" data-wow-delay="0.3s">
+                            <img class="lazyOwl" data-src="{% static 'img/about-pic3.jpg' %}" alt="name" style="width: 240px;">
+                            <h5><span>Trisha </span> Steplton</h5>
+                            <label>Designer</label>
+                          </div>
+                      </div>
+      </div>
+      <div id="contact" class="map">
+        <div class="map-location">
+<iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d1228.660793379298!2d-65.75433248528343!3d-19.57126604107974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d-19.570839799999998!2d-65.7551916!4m3!3m2!1d-19.570919099999998!2d-65.7551916!5e0!3m2!1ses!2sbo!4v1519834733262" width="400" height="320"border:"0" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="contact-info text-center wow fadeInLeft" data-wow-delay="0.3s" style="    height: 218px;" id="lugar" >
+          <h4>Oficina Central de la Empresa<br><span>Parabrisas "Chelo"</span></h4>
+          <p><span class="map-icon1"> </span>Dirección: Av. Prado san Clemente s/n</p>
+          <p><span class="map-icon2"> </span>parabrisas.chelo@gmail.com</p>
+          <p><span class="map-icon3"> </span>67646118</p>
+          <p>Contactanos en Facebook ó whatsapp</p>
+          <p>Potosí - Bolivia</p>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+<div class="blog" id="ofertas">
+        <div class="head-section">
+          <div class="container">
+            <h3><span>Productos de muestra</span><label>en Oferta</label></h3>
+          </div>
+        </div>
+  <div class="blog-grids">
+          <div class="container">
+          <div class="blog-grids-left">
+            {% for i in pro_en_ofertas %}
+    <div class="blog-grid-left wow bounceIn" data-wow-delay="0.4s"><!--start uno-->
+                <div class="blog-art-pic">
+               <div style="width: 100%;">
+         <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
+         <img src="{{MEDIA_URL}}{{i.Imagen}}">
+         </div>
+         </div>
+                </div>
+                <div class="blog-art-info">
+                  <h3><a href="#">{{i.Nombre_producto|upper}}</a></h3>
+                  <p>Descripción: {{i.Descripcion|upper}}<hr>
+                    Precio: {{i.Precio_Venta}}</p>
+                  <ul class="blog-art-info-stags">
+                    <li class="blog-art-info-stags-left"><span style="color:#337ab7">A: 25 Personas les gusta</span></li>
+                    <li class="blog-art-info-stags-right">
+                      <ul>
+                        <li><label class="b-icon1"> </label>sí<input type="radio" name="like">No <input type="radio" name="like"></li>
+                      </ul>
+                    </li>
+                    <div class="clearfix"> </div>
+                  </ul>
+                </div>
+              </div><!--fin uno-->
+                 {% endfor %}
+    </div>
+        <div class="clearfix"> </div>
+      </div>
+  </div>
+</div>
+<div class="blog" id="process">
+        <div class="head-section">
+          <div class="container">
+            <h3><span>Nuestros </span><label>Productos</label></h3>
+          </div>
+        </div>
+  <div class="blog-grids">
+          <div class="container">
+          <div class="blog-grids-left">
+            {% for i in productos %}
+    <div class="blog-grid-left wow bounceIn" data-wow-delay="0.4s"><!--start uno-->
+                <div class="blog-art-pic">
+               <div style="width: 100%;">
+         <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
+         <img src="{{MEDIA_URL}}{{i.Imagen}}">
+         </div>
+         </div>
+                </div>
+                <div class="blog-art-info">
+                  <h3><a href="#">{{i.Nombre_producto|upper}}</a></h3>
+                  <p>Descripción: {{i.Descripcion|upper}}<hr>
+                    Precio: {{i.Precio_Venta}}</p>
+                  <ul class="blog-art-info-stags">
+                    <li class="blog-art-info-stags-left"><span><span style="color:#337ab7">A: 25 Personas les gusta</span></span></li>
+                    <li class="blog-art-info-stags-right">
+                      <ul>
+                       <li><label class="b-icon1"> </label>sí<input type="radio" name="lik">
+                        No <input type="radio" name="lik"></li>
+                      </ul>
+                    </li>
+                    <div class="clearfix"> </div>
+                  </ul>
+                </div>
+              </div><!--fin uno-->
+                 {% endfor %}
+    </div>
+        <div class="clearfix"> </div>
+      </div>
+  </div>
+</div>
+  {% if user.is_authenticated %}
+<div class="modal fade" id="exampleModalAviso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Bienvenido: {{user.username|upper}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" >
+      <p>Estamos felises por averte registrado en nuestro sitio Web ahora ya eres uno más de nuestros usuarios, esperamos tenerte bien informado con todas nuestras actividades y ofertas que tendremos no te lo pierdas, opten más información ingresando al sitio Web con tu respetiva cuenta o bien revisando tu correo electrónico. Saludos!!!</p> </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" >
+      <p>Hola {{request.user}},Estamos felises por registrarte en nuestro sitio Web ahora ya eres uno más de nuestros usuarios, esperamos tenerte bien informado con todas nuestras actividades y ofertas que tendremos no te lo pierdas opten más información ingresando al sitio web con tu respetiva cuenta y bien revisando tu correo electrónico.</p> </div>
+    </div>
+  </div>
+</div>
+<div class="social">
+  <a href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?u=https://shrouded-journey-73490.herokuapp.com/','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');" class="icon icon-facebook" id="facebook"></a>
+
+  <a href="javascript: void(0);" onclick="window.open('whatsapp://send?text=Tienda Comercial Parabrisas CHELO - Visita nuestro pagina web para conoser mas de nuestros productos/sharer.php?u=https://shrouded-journey-73490.herokuapp.com/','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');" class="icon icon-whatsapp" id="whasap"></a>
+
+  <a href="javascript: void(0);" onclick="window.open('http://twitter.com/home?status=https://shrouded-journey-73490.herokuapp.com/','ventanacompartir', 'toolbar=0, status=0, width=650, height=450' );" class="icon icon-twitter"></a>
+  <a href="javascript: void(0);" onclick="window.open('https://plus.google.com/share?url=https://shrouded-journey-73490.herokuapp.com/','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');" class="icon icon-google-plus"></a>
+  <a href="mailto:parabrisas.chelo@gmail.com" class="icon icon-mail" title="Envie un Mensaje al Correo Electrónico"></a>
+  {% if user.is_authenticated %}
+  <li id="enlaces"><a href="/perfilUser/" class="icon icon-user" title="Bien venido:{{user.username|upper}}"
+    data-toggle="modal" data-target="#exampleModal"></a></li>
+  {% endif %}
+</div>
+ <div class="footer text-center">
+        <div class="container">
+          <div class="footer-inner wow zoomIn" data-wow-delay="0.3s">
+            <ul>
+              <li><a href="https://www.facebook.com/groups/CaresoftInnovaSRL/" target="_blank" style="color:white;">Tienda Comercial Parabrisas "CHELO" Propietario: Macelino Quinteros Escobar Contactanos via Whatsapp al: 67646118<span class="iconF icon-shatsapp"></span></a>
+              {% if user.is_authenticated %}
+                <li>hola: {{user.username|upper}} <a href="/salir/" class="contact-me">Salir</a></li>
+                {% else %}
+                <a href="/loguin/" class="scroll contact-me" data-toggle="modal" data-target="#exampleModal">Ingresar al Sistema</a>
+                {% endif %}</li>
+            </ul>
+          </div>
+          <script type="text/javascript">
+                  $(document).ready(function() {
+                    var defaults = {
+                        containerID: 'toTop', // fading element id
+                      containerHoverID: 'toTopHover', // fading element hover id
+                      scrollSpeed: 1200,
+                      easingType: 'linear' 
+                    };
+                    $().UItoTop({ easingType: 'easeOutQuart' });
+                    
+                  });
+                </script>
+        <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+        </div>
+      </div>
+<script>
+    new WOW().init();
+</script>
+   <script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+   <script type="text/javascript">
+      $(document).ready(function($) {
+        $(".scroll").click(function(event){   
+          event.preventDefault();
+          $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+      });
+      $("#enlaces a").on("click",function(e){
+        e.preventDefault();
+        $.ajax({
+          type:'GET',
+          url:$(this).attr("href"),
+          success:function(resp){
+            console.log(resp);
+            $(".modal-body").html(resp);
+          }
+        });
+      });
+    </script>
+    <script>
+      $(function() {
+        var pull    = $('#pull');
+          menu    = $('nav ul');
+          menuHeight  = menu.height();
+        $(pull).on('click', function(e) {
+          e.preventDefault();
+          menu.slideToggle();
+        });
+        $(window).resize(function(){
+              var w = $(window).width();
+              if(w > 320 && menu.is(':hidden')) {
+                menu.removeAttr('style');
+              }
+          });
+         $("#exampleModalAviso").modal("show");
+      });
+
+      $(document).ready(function($){
+      var div_ancho = "Ancho"+$("#contact").width();
+      var div_alto = "Alto"+$("#contact").height();
+      if(div_ancho<=640){
+        $("#lugar").hidden(500);
+      }
+      //alert(div_ancho);
+      //alert(div_alto);
+    });
+    </script>
+  </body>
+</html>
