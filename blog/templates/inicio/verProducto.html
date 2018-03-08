@@ -3,10 +3,11 @@
 	<tr><td colspan="7" align="center">LISTA DE PRODUCTOS</td></tr>
 		<tr class="success">
 			<td>Num.</td>
-			<td>Nombre del Producto</td>
+			<td>Nombre del Parabrisas</td>
 			<td>Descripción</td>
 			<td>Precio Venta</td>
 			<td>Fecha y hora de registro</td>
+			<td>Interesados</td>
 			<td>Estado</td>
 		</tr>
 {% for b in productos %}
@@ -20,15 +21,16 @@
 		<td>{{b.Precio_Venta}}</td>
 	{% endif %}
 	<td>{{b.fecha_registro}}</td>
+	<td>{{b.gusto}}</td>
 	<td>
- 	{% if b.estado %}
+	<a href="#" onclick="EdirtarPro({{b.id}});" type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Editar</a>
+	{% if b.estado %}
 			<span><img src="/static/img/icon_success.gif"></span>
 		{% else %}
 			<span><img src="/static/img/icon_error.gif"></span>
 	{% endif %}
-	<a href="#" onclick="EdirtarPro({{b.id}});" data-toggle="modal" data-target="#exampleModal">Editar<span class="glyphicon glyphicon-pencil"></span></a>
 	</td>
-</tr>
+	</tr>
 	{% endfor %}
 	<tr>
 		<td colspan="2">Total Registros:{{c_total}}</td>

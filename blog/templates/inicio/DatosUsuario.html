@@ -1,6 +1,6 @@
 <div class="table-responsive">
 <table class="table table-hover table-striped">
-	<tr><td colspan="10" align="center">LISTA DE PERSONALEN EL SISTEMA</td></tr>
+	<tr><td colspan="10" align="center">LISTA DE PERSONAL EL SISTEMA</td></tr>
 		<tr class="success">
 			<td>Usuario</td>
 			<td>Nombre</td>
@@ -26,9 +26,9 @@
 	<td>{{j.date_joined}}</td>
 	<td>
 	{% if j.is_active %}
-			<span><a href="/UsuarioVer/{{j.id}}/"><img src="/static/img/icon_success.gif"></a></span>
+			<span><img src="/static/img/icon_success.gif"></span>
 		{% else %}
-			<span><a href="/UsuarioVer/{{j.id}}/"><img src="/static/img/icon_error.gif"></a></span>
+			<span><img src="/static/img/icon_error.gif"></span>
 	{% endif %}
 	</td>
 </tr>

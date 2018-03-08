@@ -237,62 +237,7 @@ function VerProducto(){
                 <a class="navbar-brand" href="#">Tienda Comercial Parabrizas "El Chelo"</a>
             </div>
             <!-- /.navbar-header -->
-    <ul class="nav navbar-top-links navbar-right">  
-        <!-- <li class="dropdown notifications-menu">
-            
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Salidas">
-              <i class="glyphicon glyphicon-arrow-up"></i>
-              <span class="label label-warning">0</span>
-            </a>
-             <ul class="dropdown-menu">
-              <li class="header">     </li>
-              <li>
-               
-                <ul class="menu">
-                       
-                </ul>
-              </li>
-
-      <li class="footer" id="aviso"><a href="/get_retorna_salidas/" target="_blank">Imprimir Salida</a></li>
-            </ul> 
-          </li> -->
-      <!-- <li class="dropdown messages-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Reservas">
-              <i class="glyphicon glyphicon-sort"></i>
-              <span class="label label-success">0</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <ul class="menu">
-               
-                  </li>
-                </ul>
-              </li>
-              <li class="footer"><a href="/get_retorna_reservas_view/" target="_blank">Imprimir Reserva</a></li>
-      </ul>
-          </li> -->
-<!-- /.resevas -->
-      <!-- <li class="dropdown tasks-menu">
-           
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Ingresos">
-              <i class="glyphicon glyphicon-arrow-down"></i>
-              <span class="label label-danger">0</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">   un dato  </li>
-              <li>
-              
-                <ul class="menu">
-                  
-                       
-                        
-                </ul>
-              </li>
-              <li class="footer">
-                <a href="/get_retorna_ingresos/" target="_blank">Imprimir Ingreso</a>
-              </li>
-            </ul>
-          </li> -->   
+    <ul class="nav navbar-top-links navbar-right">   
      <li class="dropdown user user-menu">
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -366,9 +311,9 @@ function VerProducto(){
                             <a href="#"><span class="glyphicon glyphicon-folder-open"></span>                            Personal Propietario</a>
                             <ul class="nav nav-second-level">
                                  {% if user.is_superuser %}
-                                 <li><a href="#" onclick="NewProveedorr()">Agregar Administrativo</a></li>
+                                 <li><a href="#" onclick="NewProveedorr()">Agregar Propietario</a></li>
                                  {% endif %}
-                                 <li><a href="#" onclick="VerProveedores()">Ver Administrativo</a></li>
+                                 <li><a href="#" onclick="VerProveedores()">Ver Propietarios</a></li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -396,10 +341,6 @@ function VerProducto(){
                         <li>
                             <a href="#"><span class="glyphicon glyphicon-cog"></span>                           Información</a>
                             <ul class="nav nav-second-level">
-                               
-                                <li>
-                                   <a href="https://www.youtube.com/watch?v=9j-fv6TAGvc" target="_blank">Manual de Usuario</a>
-                                </li>
                                 <li>
                                    <a href="https://accounts.google.com/signin/v2/sl/pwd?service=mail&flowName=GlifWebSignI&flowEntry=ServiceLogin" target="_blank">Revisar Correo electrónico</a>
                                 </li>

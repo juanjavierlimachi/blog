@@ -146,8 +146,8 @@ class UserForms(forms.ModelForm):
 class FormsProducto(forms.ModelForm):
 	class Meta:
 		model=Producto
-		exclude=['usuario','estado']
+		exclude=['usuario','estado','gusto']
 class FormsProductoEdit(forms.ModelForm):
 	class Meta:
 		model=Producto
-		exclude=['usuario']
+		exclude=['usuario','gusto']

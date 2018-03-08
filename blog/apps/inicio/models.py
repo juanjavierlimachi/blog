@@ -35,5 +35,6 @@ class Producto(models.Model):
 	Imagen = models.FileField(upload_to = 'imagenes',blank=True, null=True)
 	fecha_registro=models.DateTimeField(auto_now=True)
 	En_oferta = models.BooleanField(default=False)
+	gusto = models.IntegerField(default=0)
 	def __unicode__(self):
 		return self.Nombre_producto

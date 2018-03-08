@@ -33,4 +33,5 @@ urlpatterns = patterns('',
     url(r'^EdirtarPro/(?P<id>\d+)/$',EdirtarPro),
     url(r'^ofertas/(?P<id>\d+)/$',ofertas),
     url(r'^dar_baja/(?P<id>\d+)/$',dar_baja),
+    url(r'^like/(?P<id>\d+)/$',like),
 )

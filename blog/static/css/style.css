@@ -193,15 +193,17 @@ nav a#pull {
 	padding: 2em 0;
 }
 .banner-info h1 span{
+	color: blue; font-weight: bold;
 	font-weight: 100;
-	background: #F98B68;
+	background: #e2f968;
 	font-size: 0.7em;
 	padding: 0.2em 0.5em;
 	display: inline-block;
 	font-family: Brush Script MT;
 }
 .banner-info h1 label{
-	background:rgba(114, 189, 163, 0.86);
+	color: blue;font-weight: bold;
+	background:orange;
 	font-size: 1em;
 	padding: 0.15em 0.5em;
 	margin-left:1em;
@@ -914,7 +916,7 @@ a.catch-me:hover{
 /*----- footer ----*/
 .footer{
 	background:#393939;
-	
+	margin-bottom: -60px;
 }
 .footer-inner ul{
 	margin:0;

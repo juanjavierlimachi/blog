@@ -1,9 +1,9 @@
 <div class="card">
-    <strong>Enviar Mesajes a todos los clientes</strong><br>
+    <strong>Enviar mesajes de Gmail a todos los clientes</strong><br>
     <span>Todos los datos son requeridos (*)</span>
  <form method="POST" id="Tipo" > 
     {% csrf_token %}
-                <label>Asunto: (*)</label><input type="text" name="asunto" id="asunto" placeholder="Descrpción del contenido" required />
+                <label>Asunto: (*)</label><input type="text" name="asunto" id="asunto" placeholder="Título del asunto" required />
                <label>Mensaje: (*)</label> <textarea placeholder="Escriba el mensaje a enviar..."
                name="mensaje" cols="40" rows="5" required></textarea><br>
     <button class="btn btn-success">Guardar</button>
