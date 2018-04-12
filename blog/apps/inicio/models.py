@@ -28,11 +28,11 @@ class Producto(models.Model):
 	Nombre_producto=models.CharField(max_length=150, unique=True)
 	Descripcion=models.TextField()
 	usuario = models.ForeignKey(User)
-	Precio_Venta=models.FloatField()
+	#Precio_Venta=models.FloatField()
 	#Precio_Compra=models.FloatField()#precio compra
 	#Stock = models.IntegerField(default=0)
 	estado = models.BooleanField(default=True)
-	Imagen = models.FileField(upload_to = 'imagenes',blank=True, null=True)
+	enlace_url = models.CharField(max_length=250, blank=True, null=True)
 	fecha_registro=models.DateTimeField(auto_now=True)
 	En_oferta = models.BooleanField(default=False)
 	gusto = models.IntegerField(default=0)

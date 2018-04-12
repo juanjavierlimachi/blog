@@ -2,9 +2,8 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>::Parabrisas CHELO::</title>
+    <title>::CodeMar::</title>
     <meta charset="utf-8">
-    <meta name="google-site-verification" content="XirVcnGp_dkZSA43u28qKNXac0RgCbAx3Ivgah5rFro" />
     <link rel="stylesheet" href="{% static 'css/bootstrap.minWeb.css' %}">
     <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -96,14 +95,14 @@
       <div id="home" class="header wow bounceInDown" data-wow-delay="0.4s">
           <div class="top-header">
             <div class="logo">
-              <a href="#">Logo</a>
+              <a href="#">Dev</a>
             </div>
              <nav class="top-nav">
               <ul class="top-nav">
-                <li><a  href="#servicios" class="scroll">Servicios</a></li>
-                <li><a href="#ofertas" class="scroll">Ofertas</a></li>
-                <li><a href="#process" class="scroll">Productos</a></li>
+                <li><a href="#about" class="scroll">Nosotros</a></li>
                 <li><a  href="#contact" class="scroll">Dirección</a></li>
+                <li><a  href="#servicios" class="scroll">Servicios</a></li>
+                <li><a href="#process" class="scroll">Cursos</a></li>
                 {% if user.is_authenticated %}
                 <!-- <li><a href="#team">Novedades</a></li> -->
                 <li><a href="/salir/">Salir</a></li>
@@ -119,7 +118,7 @@
       </div>
       <div class="banner-info">
         <div class="container">
-          <h1 class="wow fadeIn" data-wow-delay="0.5s"><span>Tienda Comercial</span><br /><label>Parabrisas  "CHELO"</label></h1>
+          <h1 class="wow fadeIn" data-wow-delay="0.5s"><span>CodeMar S.R.L.</span><br /><label>Desarrollo de Software</label></h1>
         <div class="top-banner-grids wow bounceInUp" data-wow-delay="0.4s">
           
           <div class="banner-grid text-center">
@@ -134,7 +133,7 @@
       <div id="about" class="about">
         <div class="head-section">
           <div class="container">
-            <h3><span>Nuestra Empresa </span><label>Parabrisas CHELO</label></h3>
+            <h3><span>Consultora </span><label>CodeMar S.R.L.</label></h3>
           </div>
         </div>
           
@@ -142,7 +141,9 @@
             <div class="col-md-4 about-grid about-grid1 wow fadeInLeft" data-wow-delay="0.4s">
               <div class="about-grid-info">
                 <h4><a href="#">Misión</a></h4>
-                <p>Parabrisas "Chelo" es una empresa moderna, vanguardista a los cambios de la tecnología, dedicada a dar soluciones a problemas empresariales y particulares impulsando sus ideas, contamos con personal autorizado preparados para brindarle servicios de alta calidad en el colocado de su parabrisas a su movilidad.</p>
+                <p>
+                  Consultora CodeMar es una empresa tecnológica moderna, vanguardista a los cambios de la tecnología, dedicada a dar soluciones a problemas empresariales y particulares impulsando sus ideas, contamos con un grupo de ingenieros innovadores preparados para brindarle servicios de alta calidad en desarrollo de software, soporte técnico en computadoras y respuestas con total calidez y sinceridad a todas las consultas que usted nos realiza.
+                </p>
               </div>
               <div class="about-grid-pic">
               <img src="{% static 'img/about-pic1.jpg' %}" title="name" />
@@ -154,14 +155,19 @@
               </div>
               <div class="about-grid-info">
                 <h4><a href="#">Nosotros</a></h4>
-                <p>Parabrisas "Chelo" brinda servicios de alta calidez en el colocado de parabrisas, reparación preventiva y correctiva de los vidrios de su vehículo, contamos con el stock completo de vidrios nacionales e importados a todo precio no lo dude más acérquese a nuestras oficinas de calle Av. Prado San clemente esq. Camargo su consulta no molesta.
-</p>
+                <p>En CodeMar S.R.L desarrollamos todo tipo de sistemas y aplicaciones nativas para dispositivos móviles Android y iOS para la automatización del manejo de su información, aplicando la que mejor se acomode a sus necesidades,<br><br>
+                Utilizando tecnologías de desarrollo modernas  
+                las cuales garantizan un producto final eficaz y sofisticado que va al nivel de su empresa.<br>
+                </p>
               </div>
             </div>
             <div class="col-md-4 about-grid about-grid1 wow fadeInRight" data-wow-delay="0.4s">
               <div class="about-grid-info">
                 <h4><a href="#">Visión</a></h4>
-                <p>Parabrisas "Chelo" pretende formar parte de tu automóvil, brindándote la mejor calidad en vidrios de todo tipo y modelo nacionales e importados, Mantenerte informado sobre muchas promociones y/o ofertas que tendremos para tí.<br><br>
+                <p>Los Sistemas de Información Automatizadas (SIA) han cambiado la forma en que operan las empresas y organizaciones, logrando importantes mejoras en la toma de decisiones, obteniendo grandes resultados como la buena atención a sus clientes convirtiéndose en empresas modernas.
+                  Somos Profesionales, la ingeniería es nuestra mejor herramienta de trabajo.
+          <br>
+                  <br>
 </p>
               </div>
               <div class="about-grid-pic">
@@ -173,34 +179,31 @@
         
         </div>
       </div>
-
  <!-- avia otras imagen -->
- 
       </div>
       <div class="work-with-us text-center" id="servicios">
         <div class="container">
-        <h4>Parabrisas "Chelo" realiza trabajos 100 % garantizados y profesionales como ser:</h4>
-          <p>Cambio de Parabrisas originales para todo tipo de vehículos.</p>
-          <p>Parabrisas laterales, espaldares, cortavientos, etc.</p>
-          <p>Accesorios de vehículos en general</p>
-          <p>Seguridad en Vidrios</p>
-          <p>Contamos con el stock completo de parabrisas para todo tipo de vehículos como ser:</p>
-          <p>CAT - KOMATSU - FIATALLIS.</p>
-          <p>Dirección: Av. Prado san Clemente Esq. Camargo s/n</p>
-          <p>Correo: parabrisas.chelo@gmail.com</p>
-            <p>Celular: 67646118</p>
-          <p>Contactanos al WhatsApp<a href="https://chat.whatsapp.com/7IPNgUQeltQENHGFr8b5oC" style="color:green" target="_blank"> contactarme</a></p>
+          <h4>Consultora CodeMar realiza trabajos 100% garatizados y profecionales como ser:</h4>
+          <p>Desarrollo de sistemas informáticos, sistemas Web, aplicaciones para Android.</p>
+          <p>Asesoramiento en proyectos informáticos.</p>
+          <p>Mantenimiento y soporte técnico de computadoras.</p>
+          <p>Formateos e Instalaciones de antivirus, sistemas operativos Windows Xp-7-8-10</p>
+          <p>Curso de Programación en C++, PHP,Python. </p>
+          <p>Cursos de Word, Excel, PowerPoint y Publisher.</p>
+          <p>Dirección: Calle Final La Paz #33</p>
+          <p>Correo electrónico: caresoft.innova@gmail.com</p>
+            <p>Celular: 79436914  has click para contactarme por: <a href="https://api.whatsapp.com/send?phone=59179436914&text=Hola%20le%20mando%20un%20saludo,%20visite%20su%20página%20web%20y%20me%20pareció%20muy%20interesante%20y%20quisiera%20que%20me%20responda%20con%20algunas%20dudas%20que%20tengo%20gracias." style="color:green" target="_blank">
+              WhatsApp</a>
+            </p>
+            <p>Tambien mediante: <a href="https://www.facebook.com/CodeMarS.R.L" target="_blank">Facebook</a></p>
             <p>Potosí - Bolivia</p>
         </div>
       </div>
-     
-      <div id="team" class="team">
-       <!--  <div class="head-section">
-          <div class="container">
-             <h3><span>Integrantes de la Empresa: </span><label>CareSoft Innova S.R.L</label></h3>
-          </div>
-        </div> -->
-       
+  <div id="contact" class="map">
+    <div class="map-location">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m30!1m12!1m3!1d894.509838569864!2d-65.7474803240542!3d-19.57482017249735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m15!3e0!4m3!3m2!1d-19.5745629!2d-65.7475073!4m5!1s0x93f94e0e72e5d423%3A0xaae8f4290ef1f4e8!2sVilla+Imperial+de+Potos%C3%AD%2C+Bolivia!3m2!1d-19.572280499999998!2d-65.75500629999999!4m3!3m2!1d-19.5743984!2d-65.7462729!5e1!3m2!1ses!2ses!4v1501868790166" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+</div> 
       <div class="sreen-gallery-cursual">
                <!-- requried-jsfiles-for owl -->
         <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
@@ -222,72 +225,65 @@
                    <div id="owl-demo" class="owl-carousel text-center">
                           <div class="item wow zoomIn" data-wow-delay="0.3s">
                             <img class="lazyOwl" data-src="{% static 'img/1.jpg' %}" alt="name" style="width: 240px;">
-                            <h5><span>Marcelo</span> Quinteros</h5>
-                            <label>Propietario</label>
+                            <h5><span>Mariana</span> Javier</h5>
+                            <label>Administadora</label>
                           </div>
                           <div class="item wow zoomIn" data-wow-delay="0.3s">
                             <img class="lazyOwl" data-src="{% static 'img/2.jpg' %}" alt="name" style="width: 240px;">
-                            <h5><span>Kenny</span> Johns</h5>
-                            <label>Trabajador</label>
-                          </div>
-                          <div class="item wow zoomIn" data-wow-delay="0.3s">
-                            <img class="lazyOwl" data-src="{% static 'img/4.jpg' %}" alt="name" style="width: 240px;">
-                            <h5><span>Parabrisas</span> Chelo</h5>
-                            <label>Ayudante</label>
+                            <h5><span>Juan</span> Javier Limachi</h5>
+                            <label>Desarrollador</label>
                           </div> 
                           <div class="item wow zoomIn" data-wow-delay="0.3s">
                             <img class="lazyOwl" data-src="{% static 'img/3.jpg' %}" alt="name" style="width: 240px;">
-                            <h5><span>Trisha </span> Steplton</h5>
-                            <label>Ayudante</label>
-                          </div>         
+                            <h5><span>Jenny</span> Tarqui M.</h5>
+                            <label>Desarrolladora</label>
+                          </div> 
                           <div class="item wow zoomIn" data-wow-delay="0.3s">
-                            <img class="lazyOwl" data-src="{% static 'img/about-pic3.jpg' %}" alt="name" style="width: 240px;">
-                            <h5><span>Marcelo</span> Quinteros</h5>
-                            <label>Propietario</label>
+                            <img class="lazyOwl" data-src="{% static 'img/4.jpg' %}" alt="name" style="width: 240px;">
+                            <h5><span>Luciana </span> Camata B.</h5>
+                            <label>Analista</label>
                           </div>
                           <div class="item wow zoomIn" data-wow-delay="0.3s">
-                            <img class="lazyOwl" data-src="{% static 'img/6.jpg' %}" alt="name" style="width: 240px;">
-                            <h5><span>Marcelo</span> Quinteros</h5>
-                            <label>Propietario</label>
+                            <img class="lazyOwl" data-src="{% static 'img/5.jpg' %}" alt="name" style="width: 240px;">
+                            <h5><span>Kenny</span> Johns</h5>
+                            <label>Secretaria</label>
+                          </div>
+                          <div class="item wow zoomIn" data-wow-delay="0.3s">
+                            <img class="lazyOwl" data-src="{% static 'img/6.png' %}" alt="name" style="width: 240px;">
+                            <h5><span>Jhosemar</span> Copa</h5>
+                            <label>Informático</label>
                           </div>
                       </div>
       </div>
-
-
-
-<div id="contact" class="map">
-    <div class="map-location">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d1228.660793379298!2d-65.75433248528343!3d-19.57126604107974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d-19.570839799999998!2d-65.7551916!4m3!3m2!1d-19.570919099999998!2d-65.7551916!5e0!3m2!1ses!2sbo!4v1519834733262" width="100%" height="400"border:"0" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
-</div>
-<div class="blog" id="ofertas">
+<div class="blog" id="process">
         <div class="head-section">
           <div class="container">
-            <h3><span>Parabrisas en</span><label> Oferta</label></h3>
+            <h3><span>Estudia nuestros </span><label>Cursos</label></h3>
           </div>
         </div>
   <div class="blog-grids">
           <div class="container">
           <div class="blog-grids-left">
-            {% for i in pro_en_ofertas %}
+            {% for i in productos %}
     <div class="blog-grid-left wow bounceIn" data-wow-delay="0.4s"><!--start uno-->
                 <div class="blog-art-pic">
                <div style="width: 100%;">
-         <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
+         <!-- <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
          <img src="{{MEDIA_URL}}{{i.Imagen}}">
-         </div>
+         </div> -->
          </div>
                 </div>
                 <div class="blog-art-info">
                   <h3><a href="#">{{i.Nombre_producto|upper}}</a></h3>
                   <p>Descripción: {{i.Descripcion|upper}}<hr>
-                    Precio: {{i.Precio_Venta}}</p>
+                    Enlace: <a href="{{i.enlace_url}}" target="_blank">{{i.enlace_url}}</a>
+                  </p>
                   <ul class="blog-art-info-stags">
-                    <li class="blog-art-info-stags-left"><span style="color:#337ab7">A: {{i.gusto}} Personas les gusta</span></li>
+                    <li class="blog-art-info-stags-left"><span><span style="color:#337ab7">A: {{i.gusto}} Personas les gusta</span></span></li>
                     <li class="blog-art-info-stags-right">
                       <ul>
-                        <li><label class="b-icon1"> </label>
-                          me gusta:<input type="radio" name="si{{i.id}}" onclick="Like({{i.id}})" data-toggle="modal" data-target="#exampleModal">
+                       <li><label class="b-icon1"> </label>
+                        me gusta:<input type="radio" name="si{{i.id}}" onclick="Like({{i.id}})" data-toggle="modal" data-target="#exampleModal">
                         </li>
                       </ul>
                     </li>
@@ -301,34 +297,34 @@
       </div>
   </div>
 </div>
-<div class="blog" id="process">
+<div class="blog" id="ofertas">
         <div class="head-section">
           <div class="container">
-            <h3><span>Parabrisas a la </span><label>Venta</label></h3>
+            <h3><span>Tutoriales y</span><label>Presentaciones</label></h3>
           </div>
         </div>
   <div class="blog-grids">
           <div class="container">
           <div class="blog-grids-left">
-            {% for i in productos %}
+            {% for i in pro_en_ofertas %}
     <div class="blog-grid-left wow bounceIn" data-wow-delay="0.4s"><!--start uno-->
                 <div class="blog-art-pic">
                <div style="width: 100%;">
-         <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
-         <img src="{{MEDIA_URL}}{{i.Imagen}}">
+         <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0; border-radius: 10px;">
+         <iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="{{i.enlace_url}}" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="no" allownetworking="all"></iframe>
          </div>
+
          </div>
                 </div>
                 <div class="blog-art-info">
-                  <h3><a href="#">{{i.Nombre_producto|upper}}</a></h3>
-                  <p>Descripción: {{i.Descripcion|upper}}<hr>
-                    Precio: {{i.Precio_Venta}}</p>
+                  <h3><a href="#">{{i.Nombre_producto}}</a></h3>
+                  <p>Descripción: {{i.Descripcion|upper}}</p>
                   <ul class="blog-art-info-stags">
-                    <li class="blog-art-info-stags-left"><span><span style="color:#337ab7">A: {{i.gusto}} Personas les gusta</span></span></li>
+                    <li class="blog-art-info-stags-left"><span style="color:#337ab7">A: {{i.gusto}} Personas les gusta</span></li>
                     <li class="blog-art-info-stags-right">
                       <ul>
-                       <li><label class="b-icon1"> </label>
-                        me gusta:<input type="radio" name="si{{i.id}}" onclick="Like({{i.id}})" data-toggle="modal" data-target="#exampleModal">
+                        <li><label class="b-icon1"> </label>
+                          me gusta:<input type="radio" name="si{{i.id}}" onclick="Like({{i.id}})" data-toggle="modal" data-target="#exampleModal">
                         </li>
                       </ul>
                     </li>
@@ -373,13 +369,13 @@
   </div>
 </div>
 <div class="social">
-  <a href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?u=https://nameless-brook-21969.herokuapp.com/','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');" class="icon icon-facebook" id="facebook"></a>
+  <a href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?u=https://shrouded-journey-73490.herokuapp.com','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');" class="icon icon-facebook" id="facebook"></a>
 
-  <a href="javascript: void(0);" onclick="window.open('whatsapp://send?text=Tienda Comercial Parabrisas CHELO - Visita nuestra página web para conocer más de nuestros productos/?u=https://nameless-brook-21969.herokuapp.com/','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');" class="icon icon-whatsapp" id="whasap"></a>
+  <a href="javascript: void(0);" onclick="window.open('whatsapp://send?text=Crea tu página Web para cualquier tipo de negocio o empresa, para más información visita mi página Web /?u=https://shrouded-journey-73490.herokuapp.com/','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');" class="icon icon-whatsapp" id="whasap"></a>
 
-  <a href="javascript: void(0);" onclick="window.open('http://twitter.com/home?status=https://nameless-brook-21969.herokuapp.com/','ventanacompartir', 'toolbar=0, status=0, width=650, height=450' );" class="icon icon-twitter"></a>
-  <a href="javascript: void(0);" onclick="window.open('https://plus.google.com/share?url=https:https://nameless-brook-21969.herokuapp.com/','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');" class="icon icon-google-plus"></a>
-  <a href="mailto:parabrisas.chelo@gmail.com" class="icon icon-mail" title="Envie un Mensaje al Correo Electrónico"></a>
+  <a href="javascript: void(0);" onclick="window.open('http://twitter.com/home?status=https://shrouded-journey-73490.herokuapp.com/','ventanacompartir', 'toolbar=0, status=0, width=650, height=450' );" class="icon icon-twitter"></a>
+  <a href="javascript: void(0);" onclick="window.open('https://plus.google.com/share?url=https://shrouded-journey-73490.herokuapp.com/','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');" class="icon icon-google-plus"></a>
+  <a href="mailto:sistemasuatf12345@gmail.com" class="icon icon-mail" title="Envie un Mensaje al Correo Electrónico"></a>
   {% if user.is_authenticated %}
   <li id="enlaces"><a href="/perfilUser/" class="icon icon-user" title="Bien venido:{{user.username|upper}}"
     data-toggle="modal" data-target="#exampleModal"></a></li>
@@ -389,13 +385,15 @@
         <div class="container">
           <div class="footer-inner wow zoomIn" data-wow-delay="0.3s">
             <ul>
-              <li><a href="https://www.google.com.bo/maps/place/Tienda+de+Parabrisas+Chelo/@-19.570935,-65.7573429,17z/data=!4m12!1m6!3m5!1s0x93f94e094a849b4b:0x6daa8e36aac601bc!2sTienda+de+Parabrisas+Chelo!8m2!3d-19.570935!4d-65.7551542!3m4!1s0x93f94e094a849b4b:0x6daa8e36aac601bc!8m2!3d-19.570935!4d-65.7551542?hl=es" target="_blank" style="color:white;">Tienda Comercial Parabrisas "CHELO" Propietario: Marcelo Quinteros Escobar - Contactanos por WhatsApp al: <a href="https://chat.whatsapp.com/7IPNgUQeltQENHGFr8b5oC">67646118</a><span class="iconF icon-shatsapp" target="_blank"></span></a>
+              <li><a href="#" target="_blank" style="color:white;">Administrador del Sistema Web: Juan Javier L.  - Para mayor información contactarse via WhatsApp al:
+               <a href="https://api.whatsapp.com/send?phone=59179436914&text=Hola%20le%20mando%20un%20saludo,%20visite%20su%20página%20web%20y%20me%20pareció%20muy%20interesante%20y%20quisiera%20que%20me%20responda%20con%20algunas%20dudas%20que%20tengo%20gracias." target="_blank">79436914</a>
+               <span class="iconF icon-shatsapp"></span>
+               <a href="https://www.facebook.com/CodeMarS.R.L" target="_blank">ó Facebook</a></a>
               {% if user.is_authenticated %}
                 <a href="/salir/" class="contact-me">Hola: {{user.username|upper}}, Salir</a>
                 {% else %}
                 <a href="/loguin/" class="scroll contact-me" data-toggle="modal" data-target="#exampleModal">Iniciar sesión</a>
                 {% endif %}</li>
-                <li><a href="#">Sitio Web creado por: CareSoft Innova.</a></li>
             </ul>
           </div>
           <script type="text/javascript">

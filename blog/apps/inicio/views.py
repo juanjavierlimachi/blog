@@ -157,7 +157,7 @@ def regisrarseUser(request):
 				#mail.send()
 				send_mail(asunto, 
 				mensaje, 
-				'"origen"parabrisas.chelo@gmail.com',
+				'"origen"caresoft.innova@gmail.com',
 				[request.POST['email']])
 				return HttpResponse('/')
 		else:
@@ -326,4 +326,4 @@ def like(request, id):
 	dato=Producto.objects.get(id=int(id))
 	dato=int(dato.gusto) + 1
 	Producto.objects.filter(id=int(id)).update(gusto=dato)
-	return HttpResponse('Gracias por indicar que le gusta el producto, puede pasar por nuestra tienda Av. Prado San Clemente esq. Camargo por la compra del producto le haremos un descuento. <a href="https://www.google.com.bo/maps/place/Tienda+de+Parabrisas+Chelo/@-19.570935,-65.7573429,17z/data=!4m12!1m6!3m5!1s0x93f94e094a849b4b:0x6daa8e36aac601bc!2sTienda+de+Parabrisas+Chelo!8m2!3d-19.570935!4d-65.7551542!3m4!1s0x93f94e094a849b4b:0x6daa8e36aac601bc!8m2!3d-19.570935!4d-65.7551542?hl=es" target="_black">Ver Mapa</a>')
+	return HttpResponse('Gracias por indicar que le gusta el curso, muy pronto estaremos con más novedades.')

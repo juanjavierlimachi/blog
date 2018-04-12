@@ -234,7 +234,7 @@ function VerProducto(){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Tienda Comercial Parabrizas "El Chelo"</a>
+                <a class="navbar-brand" href="#">CodeMar S.R.L</a>
             </div>
             <!-- /.navbar-header -->
     <ul class="nav navbar-top-links navbar-right">   
@@ -300,10 +300,10 @@ function VerProducto(){
                                 <span class="glyphicon icon-home"></span>            Inicio</a>
                         </li>
                         <li>
-                            <a href="#"><span class="glyphicon glyphicon-folder-open"></span>                            Producto</a>
+                            <a href="#"><span class="glyphicon glyphicon-folder-open"></span>                            Cursos / Tutoriales</a>
                             <ul class="nav nav-second-level">
-                                 <li><a href="#" onclick="NewProducto()">Registrar Producto</a></li>
-                                 <li><a href="#" onclick="VerProducto()">Ver Producto</a></li>
+                                 <li><a href="#" onclick="NewProducto()">Registrar</a></li>
+                                 <li><a href="#" onclick="VerProducto()">Ver Cursos</a></li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -327,10 +327,10 @@ function VerProducto(){
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><span class="glyphicon glyphicon-briefcase"></span>              Clientes</a>
+                            <a href="#"><span class="glyphicon glyphicon-briefcase"></span>              Estudiante</a>
                             <ul class="nav nav-second-level">
-                                <li><a href="#" onclick="NewAlumnos()">Agregar Cliente</a></li>
-                                <li><a href="#" onclick="VerAlumnos()">Ver Cliente</a></li>
+                                <li><a href="#" onclick="NewAlumnos()">Agregar Estudiante</a></li>
+                                <li><a href="#" onclick="VerAlumnos()">Ver Estudiante</a></li>
                                 {% if user.is_superuser %}
                                   <li><a href="#" onclick="Mensajes()">Enviar Mensaje</a></li>
                                 {% endif %}

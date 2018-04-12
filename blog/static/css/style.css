@@ -203,7 +203,7 @@ nav a#pull {
 }
 .banner-info h1 label{
 	color: blue;font-weight: bold;
-	background:orange;
+	background:rgba(114, 189, 163, 0.86);
 	font-size: 1em;
 	padding: 0.15em 0.5em;
 	margin-left:1em;
