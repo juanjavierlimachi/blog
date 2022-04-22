@@ -22,7 +22,7 @@ pycparser==2.18
 PyJWT==1.5.3
 pyOpenSSL==17.5.0
 pyparsing==2.2.0
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 python-openid==2.2.5
 python-social-auth==0.3.6
 pytz==2018.3
